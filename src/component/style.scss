@@ -1,23 +1,19 @@
-.cardHeader{
+.card-header{
     display: grid;
     grid-template-columns: 1fr;
-    font-size: 2.5rem;
+    font-size: 25px;
     font-family: cursive;
   }
   
-  .cardBody{
-    margin-left: 31%;
-    padding-top: 11%;
-    font-size: 5rem;
+  .card-body{
+    font-size: 50px;
     font-family: fantasy;
   }
- .cardText{
+ .card-text{
     color: green;
-    margin-left: 36%;
     font-size: 2rem;
     font-family: cursive;
  }
  .small{
     font-size: 1.5rem;
-    margin-left: 25%;
  }

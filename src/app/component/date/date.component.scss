@@ -1,0 +1,24 @@
+.input-wrapper form {
+    background-color: #ffffff;
+    background: local;
+    box-shadow:  20px 20px 60px #9f9f9f,
+  -20px -20px 60px #ffffff;
+    border: none;
+    padding: 1rem;
+    //font-size: 1rem;
+    width: 18em;
+    border-radius: 0.1rem;
+    color: lightcoral;
+    box-shadow: 0 0.1rem #dfd9d9;
+    cursor: pointer;
+    margin-left: 0.8rem;
+  }
+  
+  .input-wrapper form:focus {
+    outline-color: lightcoral;
+  }
+
+  input,
+input::placeholder {
+    font-family: fantasy;
+}

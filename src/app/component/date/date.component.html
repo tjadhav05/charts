@@ -1,5 +1,19 @@
-<div style="display: flex;" id="one">
-<div> 
-    
-      
-</div>
+<div class="input-wrapper">
+    <form class="row row-cols-sm-auto">
+        <div class="col-12">
+            <small style="color: black;">Auto date range</small>
+            <div class="input-group">
+                <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button">
+                    <fa-icon [icon]="calender"></fa-icon></button>
+                <input
+                    class="form-control"
+                    placeholder="This Month"
+                    name="dp"
+                    [(ngModel)]="model"
+                    ngbDatepicker
+                    #d="ngbDatepicker"
+                />
+            </div>
+        </div>
+    </form>
+  </div>
