@@ -12,6 +12,8 @@ import { DateComponent } from './component/date/date.component';
 import { JsonPipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FontAwesomeModule,
     FormsModule, 
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
