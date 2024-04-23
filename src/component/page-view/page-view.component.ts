@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Chart,registerables} from 'node_modules/chart.js';
+import { MasterService } from 'src/app/services/master.service';
 
 Chart.register(...registerables);
 
@@ -10,29 +11,35 @@ Chart.register(...registerables);
 })
 export class PageViewComponent implements OnInit {
   title = 'ng-chart';
-  chart: any = [];
+  dataSet: any = [];
+  chartData: any;
+  labelData: any[] = [];
+  colorData: any;
+  backgroundColor:any =[] 
 
-  constructor() { }
+  constructor(private service : MasterService) { }
 
   ngOnInit(): void {
-    this.renderChart();
+    this.chartData = this.service.GetChartInfo();
+    this.colorData = this.service.GetColorCode();
+    if (this.chartData) {
+      for (let i = 0; i < this.chartData.length; i++) {
+        this.backgroundColor.push(this.colorData[i].color);
+        this.labelData.push(this.chartData[i].vehicle);
+        this.dataSet[i] = this.chartData[i]['quantity']['total'];
+      }
+    }
+    console.log(this.dataSet);
+    this.renderChart(this.labelData,this.backgroundColor,this.dataSet);
   }
 
-  renderChart(){
+  renderChart(labelData:any,backgroundColor:any,dataSet:any){
     const data = {
-      labels: [
-        'Red',
-        'Blue',
-        'Yellow'
-      ],
+      labels: labelData,
       datasets: [{
         label: 'My First Dataset',
-        data: [300, 50, 100],
-        backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
-        ],
+        data: dataSet,
+        backgroundColor: backgroundColor,
         hoverOffset: 4
       }]
     };

@@ -36,7 +36,6 @@ export class MRRComponent implements OnInit {
                            'backgroundColor' : this.colorData[i].color
                           }
       }
-      console.log(this.labelData,this.dataSetNew);
     }
     this.renderChart(this.labelData,this.dataset);
   }

@@ -10,16 +10,16 @@ export class MasterService {
   colorCode = [{
     id: 1,
     catagory: "worst",
-    color: "red"
+    color: "#FC8D02"
   },{
     id: 2,
     catagory: "good",
-    color: "yellow"
+    color: "#36A2EB"
   },
   {
     id: 3,
     catagory: "best",
-    color: "green"
+    color: "#FFCE56"
   },
 ]
   data2 = [
@@ -28,7 +28,8 @@ export class MasterService {
       quantity: {
         worst :17,
         good : 14,
-        best : 2
+        best : 2,
+        total : 33
       },
     },
     {
@@ -36,14 +37,16 @@ export class MasterService {
       quantity: {
         worst :10,
         good : 25,
-        best : 5
+        best : 5,
+        total : 30
       }
     },{
       vehicle: 'truck',
       quantity: {
         worst :5,
         good : 4,
-        best : 9
+        best : 9,
+        total : 18
       }
     },
   ]
