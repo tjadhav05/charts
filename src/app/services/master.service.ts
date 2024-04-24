@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class MasterService {
   
 
-  colorCode = [{
+  colorCode:any[] = [{
     id: 1,
     catagory: "worst",
     color: "#FC8D02"
@@ -22,7 +22,7 @@ export class MasterService {
     color: "#FFCE56"
   },
 ]
-  data2 = [
+  data2: any[] = [
     {
       vehicle: 'bike',
       quantity: {
@@ -50,6 +50,11 @@ export class MasterService {
       }
     },
   ]
+  
+  
+ 
+  
+  
 
   constructor(private http: HttpClient) {}
   GetChartInfo() {

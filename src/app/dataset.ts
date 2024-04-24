@@ -1,6 +1,5 @@
 export interface Dataset {
-    label:string,
-    data:[],
-    type:'bar',
-    backgroundColor: string
+        x : number,
+        y : number,
+        r : number
 }

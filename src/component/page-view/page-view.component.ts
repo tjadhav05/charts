@@ -29,7 +29,6 @@ export class PageViewComponent implements OnInit {
         this.dataSet[i] = this.chartData[i]['quantity']['total'];
       }
     }
-    console.log(this.dataSet);
     this.renderChart(this.labelData,this.backgroundColor,this.dataSet);
   }
 
