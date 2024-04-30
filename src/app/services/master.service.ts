@@ -78,8 +78,8 @@ export class MasterService {
   },
  ]
  chartType = [
-  {type : 'Bubble'},
-  {type : 'piechart'},
+  {name : 'Bubble',type: 'bubble'},
+  {name : 'piechart', type: 'bar'},
    ];
 
   constructor(private http: HttpClient) {}

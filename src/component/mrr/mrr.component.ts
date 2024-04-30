@@ -45,8 +45,8 @@ export class MRRComponent implements OnInit {
   }
 
   renderChart(labelData: any, dataset:any) {
-    const myChart = new Chart('id.type', {
-      type: 'bar',
+    const myChart = new Chart('id.name', {
+      type: this.id.type,
       data: {
         labels: labelData,
         datasets: dataset
