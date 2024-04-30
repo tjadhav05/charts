@@ -11,31 +11,51 @@
   box-shadow:  20px 20px 60px #9f9f9f,
 -20px -20px 60px #ffffff;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.Bubble {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.piechart {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+
 .container3{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 2.5rem;
 }
 
-.container2{
-    display: grid;
-    gap: 1.5rem 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.item5 {
+// .container2{
+//     display: grid;
+//     gap: 1.5rem 2rem;
+//     grid-column-start: 1;
+//     grid-column-end: 3;
+//  //   grid-template-columns: 1fr 1fr 1fr 1fr;
+// }
+.item6 {
     border-radius: 10px;
     background: local;
     box-shadow:  28px 28px 57px #9f9f9f,
   -28px -28px 57px #ffffff;
   }
-  .item6 {
+  .item7 {
     border-radius: 10px;
     background: local;
     box-shadow:  20px 20px 60px #9f9f9f,
   -20px -20px 60px #ffffff;
   }
 .flat{
-  grid-template-columns: 1 / span 5;
   border-radius: 10px;
     background: local;
     box-shadow:  20px 20px 60px #9f9f9f,

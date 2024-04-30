@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Chart, registerables } from 'node_modules/chart.js';
 import { Observable } from 'rxjs';
 import { Dataset } from 'src/app/dataset';
@@ -11,17 +11,21 @@ Chart.register(...registerables);
   providers: [MasterService],
 })
 export class MRRComponent implements OnInit {
+  
+  @Input() charttype :any;
   title = 'ng-chart';
   chartData: any;
   labelData: any[] = [];
   readData: any[] = [];
   colorData: any;
-
+  id : any;
   dataset: any = new Array();
   dataSetNew: any = [];
   constructor(private service: MasterService) {}
 
   ngOnInit(): void {
+    this.id = this.service.GetChartType();
+    console.log(this.id);
     this.dataSetNew = [];
     this.chartData = this.service.GetChartInfo();
     this.colorData = this.service.GetColorCode();
@@ -41,7 +45,7 @@ export class MRRComponent implements OnInit {
   }
 
   renderChart(labelData: any, dataset:any) {
-    const myChart = new Chart('piechart', {
+    const myChart = new Chart('id.type', {
       type: 'bar',
       data: {
         labels: labelData,

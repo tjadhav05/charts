@@ -8,12 +8,14 @@ import { MasterService } from './services/master.service';
 })
 export class AppComponent {
   vehicles: any = [];
+  charttypes: any = [];
  
   constructor(private service : MasterService) {}
 
   ngOnInit() {
  this.vehicles = this.service.GetVehicles();
- console.log(this.vehicles);  
+ this.charttypes = this.service.GetChartType();
+ console.log(this.charttypes);  
 }
 
 }

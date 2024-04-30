@@ -1,7 +1,7 @@
-<div class="main-container">
+<!-- <div class="main-container">
     <h1>Executive Dashborad</h1>
     <div style="display: grid;gap: 1rem 2rem;margin: 15px;box-sizing: border-box;">
-        <app-date class="item1"></app-date>
+        <app-date></app-date>
         <div class="container2">
             <div *ngFor="let v of vehicles; index as i" class="flat">
                 <app-new-win  [vehicle]="vehicles[i]"></app-new-win>
@@ -9,8 +9,22 @@
             <app-page-view class="flat"></app-page-view>
         </div>
         <div class="container3">
-            <app-mrrby-country class="item5 flat"></app-mrrby-country>
-            <app-mrr class="item6 flat"></app-mrr>
+            <div *ngFor="let v of charttypes; index as i">
+            <app-mrr [charttype]=" charttypes[i]"></app-mrr>
         </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="grid-container">
+    <h1>Executive Dashborad</h1>
+    <app-date class="item1"></app-date>
+    <div *ngFor="let v of vehicles; index as i" class="flat">
+        <app-new-win [vehicle]="vehicles[i]"></app-new-win>
+    </div>
+    <app-page-view class="flat"></app-page-view>
+    <div *ngFor="let v of charttypes; index as i" class="flat" [class]="charttypes[i].type">
+        <app-mrr [charttype]=" charttypes[i]" ></app-mrr>
     </div>
 </div>

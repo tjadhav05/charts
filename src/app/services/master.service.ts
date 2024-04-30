@@ -77,6 +77,10 @@ export class MasterService {
     type: 'percent'
   },
  ]
+ chartType = [
+  {type : 'Bubble'},
+  {type : 'piechart'},
+   ];
 
   constructor(private http: HttpClient) {}
   GetChartInfo() {
@@ -87,6 +91,9 @@ export class MasterService {
   }
   GetVehicles(){
     return this.vehicles;
+  }
+  GetChartType(){
+    return this.chartType;
   }
   
 }
