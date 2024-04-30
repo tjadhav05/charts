@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MRRComponent } from './mrr.component';
+import { MrrComponent } from './mrr.component';
 
-describe('MRRComponent', () => {
-  let component: MRRComponent;
-  let fixture: ComponentFixture<MRRComponent>;
+describe('MrrComponent', () => {
+  let component: MrrComponent;
+  let fixture: ComponentFixture<MrrComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MRRComponent ]
+      declarations: [ MrrComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MRRComponent);
+    fixture = TestBed.createComponent(MrrComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

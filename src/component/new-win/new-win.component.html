@@ -1,17 +1,19 @@
 <div class="card-header">
-    New Win
+    {{vehicle.name }}
     <div style="text-align: center;">
-        <div class="card-body">
+        <div *ngIf="title" class="card-body">
             <div style="display: inline-flex;">
-                <p>230</p> 
+                <span *ngIf="vehicle.type && vehicle.type == 'percent'" style="font-size: 1.7rem;font-family: fantasy;margin-top: 0.7rem;">%</span>
+                <p>{{vehicle.year}}</p> 
+                <span *ngIf="vehicle.type && vehicle.type == 'currensy'" style="font-size: 1.7rem;font-family: fantasy;margin-top: 0.7rem;">$</span>
             </div>
         </div>
         <div class="card-text">
-            <fa-icon [icon]="upArrow"></fa-icon>
-            25%
+            <!-- <fa-icon [icon]="upArrow"></fa-icon> -->
+            {{vehicle.year}}%
         </div>
         <div class="small">
-        <small>via preivous 30 days</small>
+        <small>last 30 days</small>
         </div>
         </div>
 </div>

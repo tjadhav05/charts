@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MasterService } from './services/master.service';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  vehicles: any = [];
  
- 
-  constructor() {}
+  constructor(private service : MasterService) {}
 
   ngOnInit() {
+ this.vehicles = this.service.GetVehicles();
+ console.log(this.vehicles);  
 }
 
 }

@@ -1,16 +1,16 @@
-<h1>Executive Dashborad</h1>
-<div style="display: grid;gap: 1rem 2rem;margin: 15px;box-sizing: border-box;">
-<app-date class="item1"></app-date>
-<div class="container2">
-<app-new-win class="flat"></app-new-win>
-<app-win-rate class="flat"></app-win-rate>
-<app-new-mrr class="flat"></app-new-mrr>
-<app-page-view class="flat"></app-page-view>
+<div class="main-container">
+    <h1>Executive Dashborad</h1>
+    <div style="display: grid;gap: 1rem 2rem;margin: 15px;box-sizing: border-box;">
+        <app-date class="item1"></app-date>
+        <div class="container2">
+            <div *ngFor="let v of vehicles; index as i" class="flat">
+                <app-new-win  [vehicle]="vehicles[i]"></app-new-win>
+            </div>
+            <app-page-view class="flat"></app-page-view>
+        </div>
+        <div class="container3">
+            <app-mrrby-country class="item5 flat"></app-mrrby-country>
+            <app-mrr class="item6 flat"></app-mrr>
+        </div>
+    </div>
 </div>
-<div class="container3">
-<app-mrrby-country class="item5 flat"></app-mrrby-country>
-<app-mrr class="item6 flat"></app-mrr>
-</div>
-</div>
-
-

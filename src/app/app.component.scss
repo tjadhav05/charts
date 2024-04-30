@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+.main-container{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: local;
+  box-shadow:  20px 20px 60px #9f9f9f,
+-20px -20px 60px #ffffff;
+}
 .container3{
   display: grid;
   grid-template-columns: 1fr 1fr;
