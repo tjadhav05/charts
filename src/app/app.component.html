@@ -1,40 +1,41 @@
 <div class="flex-container">
     <div style="flex-grow: 12;"><app-date class="item1"></app-date></div>
 </div>
-<div class="row flex-container">
-    <div class="col-md-4">
-        <app-chart>
-            <h2 class="title">MRR</h2>
-            <canvas id="bar" class="map"></canvas>
-        </app-chart>
-    </div>
-    <div class="col-md-4">
-        <app-chart>
-            <h2 class="title">pie chsart</h2>
-            <canvas id="pie" class="map"></canvas>
-        </app-chart>
-    </div>
-    <div class="col-md-4">
-        <app-chart>
-            <h2 class="title">bubble</h2>
-            <canvas id="bubble" class="map"></canvas>
-        </app-chart>
-    </div>
-</div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 flat">
         <app-product-widget [product]="productList">
             <h2 class="heading">Product List ...</h2>
             <a href="" class="link">visit more ...</a>
         </app-product-widget>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 flat">
         <app-product-widget [product]="salesList">
             <h2 class="heading">Sales List ...</h2>
             <a href="" class="link">click here...</a>
         </app-product-widget>
     </div>
 </div>
+<div class="row flex-container">
+    <div class="col-md-4 flat">
+        <app-chart>
+            <h2 class="title">MRR</h2>
+            <canvas id="id.name" class="map"></canvas>
+        </app-chart>
+    </div>
+    <div class="col-md-4 flat">
+        <app-chart>
+            <h2 class="title">pie chsart</h2>
+            <canvas id="pie" class="map"></canvas>
+        </app-chart>
+    </div>
+    <div class="col-md-4 flat">
+        <app-chart>
+            <h2 class="title">pie chsart</h2>
+            <canvas id="id.name" class="map"></canvas>
+        </app-chart>
+    </div>
+</div>
+
 
 <div class="flex-container">
     <div *ngFor="let v of vehicles; index as i" class="flat">
@@ -42,9 +43,8 @@
     </div>
     <app-page-view class="flat"></app-page-view>
 </div>
-<div class="flex-container">
+<!-- <div class="flex-container">
     <div *ngFor="let v of charttypes; index as i" class="flat" [class]="charttypes[i].type">
         <app-mrr [charttype]=" charttypes[i]"></app-mrr>
     </div>
-</div>
-
+</div> -->
