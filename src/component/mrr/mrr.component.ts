@@ -21,16 +21,24 @@ export class MRRComponent implements OnInit {
   id : any;
   dataset: any = new Array();
   dataSetNew: any = [];
+  myData : any[] = [];
+  myDataSet: any ;
+
   constructor(private service: MasterService) {}
 
   ngOnInit(): void {
     this.id = this.service.GetChartType();
-    console.log(this.id);
     this.dataSetNew = [];
+    this.myData = [];
+    this.myData = this.service.GetData();
     this.chartData = this.service.GetChartInfo();
     this.colorData = this.service.GetColorCode();
+
+    console.log(this.chartData);
+    
     if (this.chartData) {
       for (let i = 0; i < this.chartData.length; i++) {
+    //    this.myDataSet[i] = this.myData[i];
         // Data formatted
         this.dataSetNew[i] = this.chartData[i]['quantity'][this.colorData[i].catagory];
         this.labelData.push(this.chartData[i].vehicle);
@@ -40,7 +48,9 @@ export class MRRComponent implements OnInit {
                            'backgroundColor' : this.colorData[i].color
                           }
       }
+      
     }
+    console.log(this.myDataSet);
     this.renderChart(this.labelData,this.dataset);
   }
 
@@ -69,4 +79,5 @@ export class MRRComponent implements OnInit {
     } 
     });
   }
+  
 }

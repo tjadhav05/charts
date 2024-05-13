@@ -30,18 +30,18 @@ export class MRRbyCountryComponent implements OnInit {
     //this.bubbleChartData = this.service.GetBubbleChartData();
 
     if (this.chartData) {
-      // for (let i = 0; i < this.chartData.length; i++) {
-        this.data[0] = {
-          x: this.chartData[0]['quantity']['total'],
-          y: this.chartData[0]['quantity']['good'],
+       for (let i = 0; i < this.chartData.length; i++) {
+        this.data[i] = {
+          x: this.chartData[i]['quantity']['total'],
+          y: this.chartData[i]['quantity']['good'],
           r: 10,
         };
-        this.dataset[0] = {
-          label: this.chartData[0].vehicle,
+        this.dataset[i] = {
+          label: this.chartData[i].vehicle,
           data: this.data,
-          backgroundColor: this.colorData[0].color,
+          backgroundColor: this.colorData[i].color,
         };
-      //}
+      }
     }
 
     this.createChart(this.dataset);

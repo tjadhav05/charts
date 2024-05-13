@@ -58,28 +58,120 @@ export class MasterService {
   vehicles = [{
     name: 'Truck',
     color: 'Red',
-    sale: 200001,
+    sale: 15689,
     year: 2024,
     type : ''
   },
   {
     name: 'Train',
     color: 'Red',
-    sale: 200001,
+    sale: 352,
     year: 2024,
     type: 'currensy'
   },
   {
     name: 'Bus',
     color: 'Red',
-    sale: 200001,
+    sale: 5234,
     year: 2024,
     type: 'percent'
   },
+ ];
+
+ data = [
+  {
+    name: 'Bus',
+    sales : [
+      {
+      year :2010,
+      country : {
+        India : 1000,
+        US : 1500,
+        UK : 500
+      }
+    },
+    {
+      year :2011,
+      country : {
+        India : 1000,
+        US : 1500,
+        UK : 500
+      }
+    },
+    {
+      year :2012,
+      country : {
+        India : 1000,
+        US : 1500,
+        UK : 500
+      }
+    },
  ]
+},
+{
+  name: 'Truck',
+  sales : [
+    {
+    year :2010,
+    country : {
+      India : 1000,
+      US : 1500,
+      UK : 500
+    }
+  },
+  {
+    year :2011,
+    country : {
+      India : 1000,
+      US : 1500,
+      UK : 500
+    }
+  },
+  {
+    year :2012,
+    country : {
+      India : 1000,
+      US : 1500,
+      UK : 500
+    }
+  },
+]
+},
+{
+  name: 'Car',
+  sales : [
+    {
+    year :2010,
+    country : {
+      India : 1000,
+      US : 1500,
+      UK : 500
+    }
+  },
+  {
+    year :2011,
+    country : {
+      India : 1000,
+      US : 1500,
+      UK : 500
+    }
+  },
+  {
+    year :2012,
+    country : {
+      India : 1000,
+      US : 1500,
+      UK : 500
+    }
+  },
+]
+}
+];
+
  chartType = [
-  {name : 'Bubble',type: 'bubble'},
   {name : 'piechart', type: 'bar'},
+  {name : 'piechart', type: 'bar'},
+  // {name : 'Bubble',type: 'bubble'},
    ];
 
   constructor(private http: HttpClient) {}
@@ -91,10 +183,12 @@ export class MasterService {
   }
   GetVehicles(){
     return this.vehicles;
-  }
+  } 
   GetChartType(){
     return this.chartType;
   }
-  
+  GetData(){
+    return this.data;
+  }  
 }
 

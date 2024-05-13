@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { MRRComponent } from 'src/component/mrr/mrr.component';
+import { ProductWidgetComponent } from './product-widget/product-widget.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { MRRComponent } from 'src/component/mrr/mrr.component';
     NewWinComponent,
     PageViewComponent,
     DateComponent,
-    MRRComponent
+    MRRComponent,
+    ProductWidgetComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
